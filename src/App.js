@@ -72,7 +72,9 @@ class App extends Component {
       return (
         <div className="App">
           <TodoForm onCreate={this.handleCreate} />
-          <input value={search} name="search" onChange={this.handleSearch} placeholder=" ..검색"/>
+          <div className="content">
+            <input value={search} name="search" onChange={this.handleSearch} placeholder="검색"/>
+          </div>
           <ToDoList 
             data={toDoList.filter((data) => data.text.indexOf(search) !== -1)}
             onUpdate={this.handleUpdate} 

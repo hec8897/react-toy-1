@@ -4,10 +4,10 @@ import TodoInfo from './TodoInfo'
 class ToDoList extends Component {
     state = {
         style: {
-          border: '1px solid black',
+          border: '1px solid #d0d0d0',
           padding: '25px',
-          margin: '15px',
-          listStyleType:'none'
+          listStyleType:'none',
+          margin: '15px 0px'
         },
     };
 
@@ -16,7 +16,9 @@ class ToDoList extends Component {
         const { style } = this.state
 
         return(
-            <div>
+            <div 
+                className='lists content'
+            >
                 <ul>
                     {data.map((data, index) => (
                         <li style={style} key={index}>

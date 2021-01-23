@@ -22,12 +22,12 @@ class TodoForm extends Component {
     render() {
         const { text } = this.state;
         return(
-            <div>
+            <div className='forms content'>
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         value={text} 
                         name="text" 
-                        placeholder="..입력" 
+                        placeholder="추가하기" 
                         onChange={this.handleChange} 
                     />
 

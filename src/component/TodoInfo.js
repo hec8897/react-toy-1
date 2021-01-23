@@ -6,7 +6,7 @@ class TodoInfo extends Component {
         toggle: false,
         text  : '',
         style : {
-          margin: '10px',
+          margin: '5px',
         },
     };
 
@@ -46,9 +46,10 @@ class TodoInfo extends Component {
         const { data } = this.props;
         const { style,toggle,text } = this.state;
         return(
-            <div>
+            <div className='item'>
                 {toggle?(
                     <input  
+                        className="list-input"
                         onChange={this.handleChange}
                         type="text"
                         value={text}
@@ -57,9 +58,10 @@ class TodoInfo extends Component {
                 ):(
                     <span style={style}>{data.text}</span>
                 )}
-
-                <button onClick={this.handleToggleChange}>{toggle ? '적용' : '수정'}</button>
-                <button onClick={this.handleRemove}>삭제</button>
+                <div>
+                  <button onClick={this.handleToggleChange}>{toggle ? '적용' : '수정'}</button>
+                  <button className='red' onClick={this.handleRemove}>삭제</button>
+                </div>
 
             </div>
             
